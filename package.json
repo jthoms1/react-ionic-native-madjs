@@ -1,0 +1,22 @@
+{
+  "name": "react-ionic-native-madjs",
+  "version": "1.0.0",
+  "description": "Application comparison of react native and ionic react.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthoms1/react-ionic-native-madjs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jthoms1/react-ionic-native-madjs/issues"
+  },
+  "homepage": "https://github.com/jthoms1/react-ionic-native-madjs#readme",
+  "devDependencies": {
+    "lerna": "^3.11.0"
+  }
+}

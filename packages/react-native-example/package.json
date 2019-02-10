@@ -1,0 +1,26 @@
+{
+  "name": "react-native-example",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Josh Thomas <josh@ionic.io>",
+  "homepage": "https://github.com/jthoms1/react-ionic-native-madjs/tree/master/packages/react-native-example#readme",
+  "license": "MIT",
+  "main": "lib/react-native-example.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthoms1/react-ionic-native-madjs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/jthoms1/react-ionic-native-madjs/issues"
+  }
+}
