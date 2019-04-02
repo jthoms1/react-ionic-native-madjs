@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { IonPage, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent } from '@ionic/react';
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent } from '@ionic/react';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { Character } from './types';
 import { getCharacterData } from './utils';
-import './App.css';
-import '@ionic/core/css/core.css';
-import '@ionic/core/css/ionic.bundle.css';
 
 type Props = RouteComponentProps<{ characterId: string }> & {
   goBack: () => void;
@@ -53,13 +50,15 @@ class CharacterList extends Component<Props, State> {
 
   render() {
     return (
-      <IonPage>
-        <IonToolbar color="transparent">
-          <IonButtons slot="start">
-            <IonBackButton goBack={this.props.goBack} defaultHref={`/characters`} />
-          </IonButtons>
-          <IonTitle>Character Details</IonTitle>
-        </IonToolbar>
+      <>
+        <IonHeader>
+          <IonToolbar color="transparent">
+            <IonButtons slot="start">
+              <IonBackButton goBack={this.props.goBack} defaultHref={`/characters`} />
+            </IonButtons>
+            <IonTitle>Character Details</IonTitle>
+          </IonToolbar>
+        </IonHeader>
         <IonContent>
           {this.state.character == null ? 
           <IonCard>
@@ -87,7 +86,7 @@ class CharacterList extends Component<Props, State> {
           </IonCard>
           }
         </IonContent>
-      </IonPage>
+      </>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { IonPage, IonToolbar, IonSearchbar, IonContent, IonList, IonItem, IonLabel, IonAvatar } from '@ionic/react';
+import { IonPage, IonHeader, IonToolbar, IonSearchbar, IonContent, IonList, IonItem, IonLabel, IonAvatar } from '@ionic/react';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { Character } from './types';
 import { matchCharacterName, getCharacterData } from './utils';
@@ -35,14 +35,16 @@ class CharacterList extends Component<Props, State> {
 
   render() {
     return (
-      <IonPage>
-        <IonToolbar color="transparent">
-          <IonSearchbar
-              placeholder="Search"
-              onIonChange={this.setSearchText}
-          >
-          </IonSearchbar>
-        </IonToolbar>
+      <>
+        <IonHeader>
+          <IonToolbar color="transparent">
+            <IonSearchbar
+                placeholder="Search"
+                onIonChange={this.setSearchText}
+            >
+            </IonSearchbar>
+          </IonToolbar>
+        </IonHeader>
         <IonContent>
           <IonList>
             {this.state.characterList
@@ -57,7 +59,7 @@ class CharacterList extends Component<Props, State> {
               ))}
           </IonList>
         </IonContent>
-      </IonPage>
+      </>
     );
   }
 }
